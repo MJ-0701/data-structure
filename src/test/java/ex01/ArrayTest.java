@@ -2,22 +2,20 @@ package ex01;
 
 import org.junit.jupiter.api.Test;
 
-import static org.junit.jupiter.api.Assertions.*;
-
 
 class ArrayTest {
 
     @Test
     void arrayTest(){
-        Array array = new Array();
+        ArrayClass arrayClass = new ArrayClass();
 
-        array.arrayList();
+        arrayClass.arrayList();
     }
 
     @Test
     void mCountTest(){
-        Array array = new Array();
-        array.arrayMcount();
+        ArrayClass arrayClass = new ArrayClass();
+        arrayClass.arrayMcount();
     }
 
 }

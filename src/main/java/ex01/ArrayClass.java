@@ -3,7 +3,7 @@ package ex01;
 import java.util.ArrayList;
 import java.util.List;
 
-public class Array {
+public class ArrayClass {
 
     String dataset[] = {
                 "Braund, Mr. Owen Harris",
@@ -54,8 +54,8 @@ public class Array {
      public void arrayMcount(){
          int count = 0;
          for(String e : dataset){
-             if(e.indexOf("M") >0){ // 문자열.indexOf() -> 문자 key 가 해당 문자열 안에 있으면 해당 문자의 위치 (index) 값을 리턴하고, 없으면 -1 을 리턴함.
-                count ++;
+             if(e.contains("M")){ // 문자열.indexOf() -> 문자 key 가 해당 문자열 안에 있으면 해당 문자의 위치 (index) 값을 리턴하고, 없으면 -1 을 리턴함.
+                count ++; // M이 제일 앞에서부터 시작 할 경우 index 번호가 0 이므로 >= 0 으로 사용해도 되나 문자열 안에 M을 포함하면 카운트 하는것으로 함.
              }
          }
          System.out.println(count);

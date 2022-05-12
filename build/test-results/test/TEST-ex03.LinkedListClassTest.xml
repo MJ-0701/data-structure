@@ -1,10 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="ex03.LinkedListClassTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2022-05-11T05:44:13" hostname="chaemyeongjeong-ui-MacBookAir.local" time="0.029">
+<testsuite name="ex03.LinkedListClassTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2022-05-12T05:50:12" hostname="chaemyeongjeong-ui-MacBookAir.local" time="0.03">
   <properties/>
-  <testcase name="LinkedListTest()" classname="ex03.LinkedListClassTest" time="0.029"/>
-  <system-out><![CDATA[ex03.SingleLinkedList$Node@3561c410
-1
-null
+  <testcase name="delNodeTest()" classname="ex03.LinkedListClassTest" time="0.03"/>
+  <system-out><![CDATA[2
+4
 ]]></system-out>
   <system-err><![CDATA[]]></system-err>
 </testsuite>

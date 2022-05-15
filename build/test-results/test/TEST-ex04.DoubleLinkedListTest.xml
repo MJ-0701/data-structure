@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="ex04.DoubleLinkedListTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2022-05-15T02:31:53" hostname="chaemyeongjeong-ui-MacBookAir.local" time="0.046">
+  <properties/>
+  <testcase name="doubleLinkedList()" classname="ex04.DoubleLinkedListTest" time="0.046"/>
+  <system-out><![CDATA[1
+2
+3
+4
+5
+headSearchStart :1652581913529
+headSearchEnd :1652581913529
+tailSearchStart :1652581913537
+tailSearchEnd :1652581913537
+]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

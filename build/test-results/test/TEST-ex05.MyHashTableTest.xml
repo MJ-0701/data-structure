@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="ex05.MyHashTableTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2022-05-20T03:04:15" hostname="chaemyeongjeong-ui-MacBookAir.local" time="0.033">
+  <properties/>
+  <testcase name="hashFunctionTest()" classname="ex05.MyHashTableTest" time="0.033"/>
+  <system-out><![CDATA[01077603932
+]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

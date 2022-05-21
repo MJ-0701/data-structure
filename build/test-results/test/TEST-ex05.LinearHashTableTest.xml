@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="ex05.LinearHashTableTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2022-05-21T03:50:20" hostname="chaemyeongjeong-ui-MacBookAir.local" time="0.029">
+  <properties/>
+  <testcase name="linearHashtableTest()" classname="ex05.LinearHashTableTest" time="0.029"/>
+  <system-out><![CDATA[01022223333
+]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

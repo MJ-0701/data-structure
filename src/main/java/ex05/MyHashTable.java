@@ -68,7 +68,7 @@ public class MyHashTable {
         }
     }
 
-    // Chaining 기법 : 충돌이 일어나면 링크드 리스트를 이용하여 데이터를 추가로 뒤로 연결시키는 기법.
+
     
 
 

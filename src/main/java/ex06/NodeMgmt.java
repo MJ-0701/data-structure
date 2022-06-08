@@ -136,8 +136,74 @@ public class NodeMgmt { // 이진 탐색트리 구현
             }
             return true;
         }
+        else {
+            // 삭제할 Node가 Child Node를 두 개 가지고 있을 경우(삭제할 Node가 Parent Node 왼쪽에 있을때)
+            // 기본 사용전략 : 밑의 전략중 하나를 선택해서 사용 한다.
+            // 1.삭제할 Node의 오른쪽 자식 중, 가장 작은 값을 삭제할 Node의 Parent Node가 가리키도록 한다.
+            // 2.삭제할 Node의 왼쪽 자식 중, 가장 큰 값을 삭제할 Node의 Parent Node가 가리키도록 한다.
+            // 1번전략 사용
+            // Case3-1: 삭제할 Node 가 Child Node 를 두 개 가지고 있고, (삭제할 Node 가 부모 Node 의 왼쪽에 있을 때)
+
+            if(value < currParentNode.value){ // 삭제할 Node 가 부모 Node 의 왼쪽에 있을 때
+                Node changeNode = currNode.right;
+                Node changeParentNode = currNode.right;
+                while(changeNode.left != null){
+                    changeParentNode = changeNode;
+                    changeNode = changeNode.left;
+
+                }
+                // 여기까지 실행되면, changeNode 에는 삭제할 Node 의 오른쪽 Node 중에서,
+                // 가장 작은 값을 가진 Node 가 들어있음
 
 
+                if(changeNode.right != null){ // Case 3-1-2: angeNode 의 오른쪽 child Node 가 있을 때.
+                    changeParentNode.left = changeNode.right;
+                }else { // Case 3-1-1: changeNode 의 child Node 가 없을 때.
+                    changeParentNode.left = null;
+                }
+                // currParentNode 의 왼쪽 Child Node 에, 삭제할 Node 의 오른쪽 자식중,
+                // 가장 작은 값을 가진 changeNode 를 연결
+                currParentNode.left = changeNode;
+
+                // currParentNode 의 왼쪽 Child Node 가 현재 changeNode 이고
+                // changeNode 의 왼쪽/오른쪽 Child Node 를 모두, 삭제할 currNode 의
+                // 기존 왼쪽/오른쪽 Node 로 변경.
+                changeNode.right = currNode.right;
+                changeNode.left = currNode.left;
+
+                currNode = null;
+
+            } else { // Case3-2: 삭제할 Node 가 Child Node 를 두 개 가지고 있고, (삭제할 Node 가 부모 Node 의 오른쪽에 있을 때)
+                Node changeNode = currNode.right;
+                Node changeParentNode = currNode.right;
+                while (changeNode.left != null) {
+                    changeParentNode = changeNode;
+                    changeNode = changeNode.left;
+                }
+                // 여기까지 실행되면, changeNode 에는 삭제할 Node 의 오른쪽 Node 중에서,
+                // 가장 작은 값을 가진 Node 가 들어있음
+                if (changeNode.right != null) {
+                    // Case 3-2-2: changeNode 의 오른쪽 Child Node 가 있을 때
+                    changeParentNode.left = changeNode.right;
+                } else {
+                    // Case 3-2-1: changeNode 의 Child Node 가 없을 때
+                    changeParentNode.left = null;
+                }
+                // currParentNode 의 오른쪽 Child Node 에, 삭제할 Node 의 오른쪽 자식중,
+                // 가장 작은 값을 가진 changeNode 를 연결
+                currParentNode.right = changeNode;
+
+                // parentNode 의 왼쪽 Child Node 가 현재, changeNode 이고,
+                // changeNode 의 왼쪽/오른쪽 Child Node 를 모두, 삭제할 currNode 의
+                // 기존 왼쪽/오른쪽 Node 로 변경
+                changeNode.right = currNode.right;
+                changeNode.left = currNode.left;
+
+                currNode = null;
+
+            }
+            return true;
+        }
     }
 
 
